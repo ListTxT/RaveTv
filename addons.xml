@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<addons>
+
+<addon id="repo.ravetv" name="[COLOR red]Rave Tv[/COLOR]" version="0.1" provider-name="Rave Tv">
+	<extension point="xbmc.addon.repository" name="Rave Tv repo">
+		<info compressed="false">http://raw.githubusercontent.com/raveftw/RaveTv/master/addons.xml</info>
+		<checksum>http://raw.githubusercontent.com/raveftw/RaveTv/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.githubusercontent.com/raveftw/RaveTv/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Rave Tv repo</summary>
+		<description>Repositório Rave Tv</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
+<addon id="plugin.video.ravetv"
+       name="[COLOR red]Rave Tv[/COLOR]" 
+       version="0.1"
+       provider-name="Rave Tv">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" />
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" />
+    <import addon="script.module.simplejson" />    
+    <import addon="script.module.livestreamer" />
+    <import addon="script.module.pyamf" />
+    <import addon="plugin.video.f4mTester" />
+    <import addon="plugin.video.SportsDevil" />
+    <import addon="program.plexus" />
+    <import addon="script.module.liveresolver" />
+    <import addon="plugin.video.plexus-streams" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Kodi addon - Rave Tv</summary>
+    <description>Não alojamos qualquer servidor, apenas disponibilizamos links de acesso público na Internet.
+Addon disponibilizado para familia e amigos.</description>
+    <platform>all</platform>
+  </extension>
+  </addon>
+
+
+<addon id="plugin.program.addoninstaller" version="1.2.9"
+    	name="Addon Installer" provider-name="tvaddons.ag, Blazetamer">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.addon.common" optional="true" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Addon Browser</summary>
+        <description>Its like an App Store where you'll find Addons for Kodi, and everything is free!</description>
+        <disclaimer>By using this, you take reponsibility for anything that happens.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum>http://forums.tvaddons.ag/forums/156-ADDON-INSTALLER</forum>
+        <website>http://addons.tvaddons.ag/</website>
+        <source></source>
+        <email></email>
+    </extension>
+</addon>
+
+
+<addon id="plugin.program.logviewer"
+       name="Easy Log Viewer"
+       version="1.0.2a.jcg"
+       provider-name="kinkin">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               	library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>View your error log from within Kodi</summary>
+        <description>Allows you to view errors and warnings in your kodi.log file</description>
+        <platform>all</platform>
+        <language>en</language>
+        <license>GNU GENERAL PUBLIC LICENSE</license>
+        <forum></forum>
+        <website></website>
+        <source></source>
+        <email></email>
+    </extension>
+	
+</addon>
+
+
+<addon id="plugin.video.f4mTester" version="2.6.9" name="f4mTester" provider-name="Shani">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.6.8"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    
+
+    <extension point="xbmc.addon.metadata">
+        <summary>f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+
+<addon id="plugin.video.live.streamspro"
+       name="LiveStreamsPro"
+       version="2.7.2"
+       provider-name="Shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />    
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+
+  <extension point="xbmc.addon.metadata">
+    <summary>livestreamspro- shamelessly forked from livestreams but added many thinks</summary>
+    <description>
+        In addition to what livestreams allowed you to do, you can now,
+        1. call regex in regex,
+        2. multiple regex in page, regex in session, also htmlunescape responses
+        3. create session from one regex and pass onto next in line
+        4. save sessions to a file and open again later
+        5. write python code in .py file, put in the profile directory and then call from your regex.
+        6. use epoctime, guid and unpack as functions already defined.
+        7. Use it to post values to the pages to get the proper responses
+        8. support many headers, like origin, X-Requested-With
+        9. you can now append cookies in response and then read in regex using includeheaders
+        10. You can now link to another web url via your xml using externallink
+        11. support for google captcha, now you can show and then post the text
+        
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+
+<addon id="plugin.video.p2psport"
+	name="P2P Sport"
+	version="0.1.5"
+	provider-name="natko1412,Extracsaba (ajavierfc mod)">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.mechanize" version="0.2.6"/>
+
+    
+    
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Watch p2p sports in Kodi</summary>
+    
+    <platform>all</platform>
+    <forum>forums.tvaddons.ag</forum>
+    
+  </extension>
+</addon>
+
+
+<addon id="plugin.video.p2p-streams"
+       name="p2p-streams"
+       version="1.2.0b"
+       provider-name="enen92,fightnight">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.pytz" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.mechanize" version="0.2.6"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>SopCast and AceStream</summary>
+    <description lang="en">AceStream and Sopcast in your favourite media center! Watch peer-to-peer streams in Kodi without the need for external players. Project page: https://github.com/enen92/P2P-Streams-Kodi</description>
+    <description lang="pt">AceStream e Sopcast no seu Media-Center de eleição! Assista a streams peer-to-peer no Kodi sem a necessidade de players externos. Página do projecto: https://github.com/enen92/P2P-Streams-Kodi</description>
+    <description lang="nl">Acestream en Sopcast in jouw favoriete media center. Kijk peer-to-peer streams in Kodi zonder de noodzaak voor externe spelers. Project pagina: https://github.com/enen92/P2P-Streams-Kodi/</description>
+    <description lang="it">AceStream e SopCast nel tuo Media Center preferito! Guarda i canali peer-to-peer in Kodi senza la necessità di player esterni. Pagina del progetto: https://github.com/enen92/P2P-Streams-Kodi/</description>
+    <disclaimer lang="en">The authors does not host nor distribute any of the content you may watch using this addon. The authors have no affiliation with any of the content providers. This addon does not track its users.</disclaimer>
+    <disclaimer lang="pt">Os autores não alojam nem distribuem nenhum do conteúdo acessível a partir deste addon. Os autores não têm qualquer afiliação com nenhum dos sites utilizados por este addon. O addon não contem nenhuma ferramenta de tracking.</disclaimer>
+    <disclaimer lang="nl">De auteurs houden of delen niets van de inhoud die u kunt bekijken met behulp van deze addon. De auteurs hebben geen banden met welke leverancier van inhoud dan ook. Deze addon houdt geen gegevens bij van zijn gebruikers.</disclaimer>
+    <disclaimer lang="it">L'autore non detiene o distribuisce alcun contenuto fruibile tramite l'utilizzo di questo addon. L'autore non è affiliato con nessun fornitore dei contenuti. Questo addon non traccia i suoi utenti.</disclaimer>
+    <forum>http://forum.kodi.tv/showthread.php?tid=201894</forum>
+    <source>https://github.com/enen92/P2P-Streams-Kodi | https://github.com/enen92/P2P-Streams-Kodi--Modules-</source>
+    <website>https://code.google.com/p/p2p-strm/</website>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+
+<addon
+  id="plugin.video.SportsDevil"
+  version="2016.11.20"
+  name="SportsDevil"
+  provider-name="SportsDevil">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.simplejson" />
+   <import addon="script.module.six" />
+   <import addon="script.module.requests" />
+   <import addon="script.module.livestreamer" />
+   <import addon="script.module.pydevd" version="4.4.0" optional="true"/>
+  </requires>
+  <extension 
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Play videos of different sports streaming sites</summary>
+    <description>Play videos of different sports streaming sites</description>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+
+<addon id="plugin.video.veetle" version="0.3.3" name="Veetle" provider-name="fightnight (creator: t0mm0)">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.simplejson" version="2.0.10"/>
+        <import addon="script.common.plugin.cache" version="1.3.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point= "xbmc.addon.metadata">
+	<summary lang="en">Browse and stream from veetle.com</summary>
+	<description lang="en">Enables watching streams on veetle.com that are flash enabled.</description>
+        <disclaimer lang="en">Does not work for 'HD' streams which require a software download.</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+
+<addon id="plugin.video.xbmchubmaintenance" version="2.1.6"
+	name="Maintenance Tool" provider-name="tvaddons.ag">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" />
+    <import addon="script.module.addon.common" />
+    <import addon="script.module.metahandler" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Maintenance Tool</summary>
+    <description lang="en">Maintenance Tool is your one stop tool for all fixes and information.</description>
+    <platform>all</platform>
+    <forum>http://forums.tvaddons.ag/forums/130-MAINTENANCE-TOOL</forum>
+    <website>http://www.tvaddons.ag/</website>
+  </extension>
+</addon>
+
+
+<addon id="program.plexus"
+       name="Plexus"
+       version="0.1.4"
+       provider-name="enen92, TV ADDONS">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>executable</provides>
+  </extension>
+  
+  <extension point="xbmc.addon.metadata">
+    <summary>SopCast and AceStream for Kodi</summary>
+    <description lang="en">Plexus - Any complex structure containing an intricate network of parts. Plexus brings native peer-to-peer support (AceStream and SopCast) for Kodi Entertainment Center for several platforms.[CR][CR]Documentation: (missing)</description>
+    <description lang="pt">Plexus - Uma estrutura complexa constituída por uma rede de partes. O Plexus adiciona suporte peer-to-peer nativo (AceStream e Sopcast) ao Kodi Entertainment Center para várias plataformas.[CR][CR]Documentação: (em falta)</description>
+    <disclaimer lang="en">The author does not host nor distribute any of the content you may watch using this addon. The author has no part in the development of any included technologies. When seeking help in Kodi's forum please respect rules (http://kodi.wiki/view/Forum_rules).</disclaimer>
+    <disclaimer lang="pt">Os autores não alojam nem distribuem nenhum do conteúdo que poderá ser reproduzido a partir deste addon. Os autores não têm qualquer parte no desenvolvimento de qualquer uma das tecnologias. Se procurar ajuda no fórum oficial do Kodi por favor respeite as regras do fórum (http://kodi.wiki/view/Forum_rules).</disclaimer>
+    <forum>http://forums.tvaddons.ag</forum>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+
+<addon id="script.module.liveresolver" 
+     name="LiveResolver" 
+     version="0.1.48" 
+     provider-name="natko1412">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.addon.common" version="2.0.0" />
+
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Resolve common live video host URL's to be playable in XBMC/Kodi + find links embeded in sites.</summary>
+    <description lang="en"></description>    
+  </extension>
+</addon>
+
+
+<addon id="script.module.tknorris.shared" name="TKNorris Common Libraries" version="0.0.13" provider-name="tknorris">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Reusable Modules used by several of tknorris's addons</summary>
+	</extension>
+</addon>
+
+
+<addon id="script.module.urlresolver" name="URLResolver" version="3.0.24" provider-name="tvaddons.ag, Eldorado">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+		<description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+	</extension>
+</addon>
+
+
+<addon id="script.mrknow.urlresolver" name="Mrknow URLResolver" version="2016.11.12.1" provider-name="mrknow" >
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">This addon is almost exact copy Urlresolver from Tknorris repository https://github.com/tknorris/script.module.urlresolver. Resolve common video host URL's to be playable in XBMC/Kodi. Website http://filmkodi.com . Our suport forum https://github.com/mrknow/filmkodi/issues. </summary>
+		<description lang="en">This addon is almost exact copy Urlresolver from Tknorris repository https://github.com/tknorris/script.module.urlresolver Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+	</extension>
+</addon>
+
+
+<addon id="script.video.F4mProxy" 
+	     name="F4mProxy" 
+	     version="2.6.9" 
+	     provider-name="Shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+  </extension>
+
+
+    
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Proxy for f4m</summary>
+    <description lang="en">Use this addon to play F4m v1 and v2 streams</description>
+  </extension>
+</addon>
+
+
+<addon id="script.xbmcbackup"
+    name="Backup" version="1.0.7" provider-name="robweber">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.httplib2" version="0.8.0" />
+    <import addon="script.module.oauth2client" version="1.4.7" />
+    <import addon="script.module.uritemplate" version="0.6" />
+    <import addon="script.module.yaml" version="3.11"/>
+    <import addon="script.module.googleapi" version="1.4.2" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py"> 
+     <provides>executable</provides> 
+  </extension> 
+  <extension point="xbmc.service" library="scheduler.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="ar">???? ????????? ????? ?????? ??? ?? ?? ?? ?????? ???????? ?? ???? ???? ?????? ?? ??????? ????????</summary>
+    <summary lang="be">Backup and restore your XBMC database and configuration files in the event of a crash or file corruption.</summary>
+    <summary lang="bg">????????? ???? ?? ??????? ???????? ????? ?? XBMC ? ???????????? (???? ????) ?????? ???? ?? ????? ? ?????????, ? ?????? ?? ????????????.</summary>
+    <summary lang="ca">Feu còpies de seguretat i restaureu la vostra base de dades de l'XBMC i dels fitxers de configuració en el cas de fallada o corrupció dels fitxers.</summary>
+    <summary lang="cs">Zálohování a obnovení XBMC databáze a konfiguracních souboru v prípade chyby nebo pokození souboru.</summary>
+    <summary lang="da">Sikkerhedskopiér og genskab din XBMC database og konfigurationsfiler i tilfælde af et nedbrud eller en ødelagt fil.</summary>
+    <summary lang="de">Die XBMC Datenbank sichern und bei Dateiverlust oder Beschädigung wiederherstellen.</summary>
+    <summary lang="el">??µ??????ste a?t???afa asfa?e?a? t?? ß?s?? ded?µ???? ?a? t?? ???µ?se?? t?? XBMC ??a t?? p??a??t?ta sfa?µ?t?? ? ?atast??f?? a??e???.</summary>
+    <summary lang="en">Backup and restore your Kodi database and configuration files in the event of a crash or file corruption.</summary>
+    <summary lang="en_NZ">Backup and restore your XBMC database and configuration files in the event of a crash or file corruption.</summary>
+    <summary lang="en_US">Backup and restore your XBMC database and configuration files in the event of a crash or file corruption.</summary>
+    <summary lang="es">Haz copia de seguridad de tu base de datos y configuración y recupera todo en caso de fallo.</summary>
+    <summary lang="es_MX">Respalda y restaura tu base de datos y archivos de configuración de XBMC dado el evento de un cuelgue o corrupción de archivos. </summary>
+    <summary lang="eu">XBMC datu-basea eta konfigurazio fitxategien babes-kopia egin kraskatze edo fitxategi hondamena saihesteko</summary>
+    <summary lang="fr">Sauvegarder et restaurer vos bases de données XBMC et vos fichiers de configuration en cas de crash ou de fichiers corrompus.</summary>
+    <summary lang="fr_CA">Sauvegarder et restaurer votre base de données et vos fichiers de configuration XBMC dans le cas d'un plantage ou d'une corruption de fichier.</summary>
+    <summary lang="gl">Crear copia de seguranza e restaurar a base de datos e ficheiros de configuración de XBMC no caso dun fallo ou corrupción de ficheiros.</summary>
+    <summary lang="he">????? ?????? ??? ??????? ????? ??????? ?? XBMC ????? ?? ????? ?? ????? ??????.</summary>
+    <summary lang="hr">Sigurnosno kopirajte i obnovite vau XBMC bazu podataka i datoteke podeavanja prilikom ruenja ili otecenja datoteka.</summary>
+    <summary lang="hu">Biztonsági mentés készítése az XBMC adatbázisról és a beállítófájlokról vagy állítsa helyre azokat egy rendszerösszeomlás vagy adatvesztés után.</summary>
+    <summary lang="id">Cadangkan dan kembalikan basis data XBMC Anda beserta berkas konfigurasi apabila terjadi kerusakan atau korupsi berkas.</summary>
+    <summary lang="it">Effettua il backup o ripristina il tuo database di XBMC e i file di configurazione qualora si verifichi una chiusura imprevista o un danneggiamento dei file.</summary>
+    <summary lang="ja">??????????????????????XBMC ?????????????????????·?????????</summary>
+    <summary lang="ko">XBMC ??????? ?? ??? ???? ?????.</summary>
+    <summary lang="lt">Atsargine kopija katra atkuria jusu XBMC duomenu baze ir konfiguracijos failus avarijos ar failo sugadinimo metu.</summary>
+    <summary lang="nl">Back-up en herstel je XBMC database en configuratiebestanden in geval van een crash of bestandscorruptie.</summary>
+    <summary lang="no">Sikkerhetskopier og gjenopprett dine XBMC-databaser og -konfigurasjonsfiler i tilfelle et krasj eller filkorrupsjon.</summary>
+    <summary lang="pl">Stwórz kopie bezpieczenstwa oraz przywróc twoja baze danych XBMC lacznie z plikami konfiguracyjnymi, w przypadku awarii lub uszkodzenia plików.</summary>
+    <summary lang="pt">Crie cópias de segurança da base de dados do XBMC e dos ficheiros de configuração. Pode restaurar o conteúdo se ocorrer um crash ou corrupção de ficheiros.</summary>
+    <summary lang="pt_BR">Faça backup e restaure o banco de dados do XBMC e seus arquivos de configuração, no caso de falha ou corrupção de arquivo.</summary>
+    <summary lang="ru">?????????? ? ???????????????? ???? ?????? ? ???????????????? ????? XBMC, ???? ?? ????????? ?????? ?????? ? ?????? ?????? ??? ??????????? ??????.</summary>
+    <summary lang="sk">Zálohovanie a obnova XBMC databázy a konfiguracných súborov pre prípad havárie alebo pokodenia súboru.</summary>
+    <summary lang="sv">Ta backupp av eller återställ din XBMC-databas och konfigurationsfiler i händelse av en krash eller filkorruption.</summary>
+    <summary lang="zh">????? XBMC ????????,???????????????</summary>
+    <description lang="ar">???? ?? ?? ???? ???????? ??????? ????? ?? ??? ??????? ????? ????????? ? ??? ??? ??????? ???. ????? ??????? ????? ??????? ?????? ??????? ????????? ????????? ??????? ????? ??? ?? ???? ????? ???? ??????? ?? ????? ??? ?? ?? ?? ?? ???????? ??? ???? ????? ?????. ????? ????? ????? ???????? ??? ?????? ?? ?????? ???????</description>
+    <description lang="be">Ever hosed your XBMC configuration and wished you'd had a backup? Now you can with one easy click. You can export your database, playlist, thumbnails, addons and other configuration details to any source writeable by XBMC or directly to Dropbox cloud storage. Backups can be run on demand or via a scheduler. </description>
+    <description lang="bg">?????? ?? ??? ?????? ?????? ?????????, ????? ??? ??????? ?? XBMC? ? ???????????? ?? ? ???????? ?????? ? ???? ?????? ?? ????????? ???????? ????? ???? ? ???? ????????. ?????? ?? ???????? ?????? ?? ?????, ???????????, ???????????, ????????? ? ?????, ?? ????? ????? ?? ????? XBMC ??? ????? ?? ?????? ??? ???????? ? Dropbox. ?????? ?? ????????? ? ??????????? ????????? ?? ????? ???? ????????? ???????? ?? ?????.</description>
+    <description lang="ca">Alguna vegada s'ha carregat la seva configuració de l'XBMC i ha desitjat tenir una còpia de seguretat? Ara pot fer-ho amb un simple clic. Pot exportar la seva base de dades, llista de reproducció, miniatures, complements i altres detalls de la configuració a qualsevol font que pugui ser escrita per l'XBMC o directament a l'emmagatzematge en el núvol Dropbox. Les còpies de seguretat es poden executar sota demanda o per mitjà d'un planificador.</description>
+    <description lang="da">Har du prøvet at slette din XBMC opsætning, og ønsket at du havde haft sikkerhedskopi? Nu kan du få det med et enkelt klik. Du kan eksportere din database, afspilninglister, miniaturebilleder, addons og andre opsætningsdetaljer til enhver kilde, som er skrivbar for XBMC eller direkt til Dropbox cloud lager. Sikkerhedskopier kan køres manuelt eller via en tidsplan.</description>
+    <description lang="de">Jemals deine XBMC Konfiguration zerschossen und dir dann gewünscht, dass ein Backup existiert? Jetzt kannst du eine Sicherung mit nur einem Klick erzeugen. Du kannst deine Datenbanen, Playlisten, Thumbnails, Addons und andere Details zu einem Ort deiner Wahl sichern.</description>
+    <description lang="el">Sa? ?t??e p?t? ?a ??sete t?? ???µ?se?? t?? XBMC ?a? ?a e??este ?a e??ate a?t???af? asfa?e?a?; ????? µp??e?te µe ??a ap?? ????. ?p??e?te ?a e???ete t? ß?s? ded?µ????, t?? ??ste? a?apa?a?????, t?? µ??????af?e?, ta p??s?eta ?a? ???e? ?ept?µ??e?e? t?? e??at?stas?? se ?p??ad?p?te p??? st?? ?p??a µp??e? ?a ????e? t? XBMC, ? ape??e?a? st? ???a??asµ? sa? st? Dropbox. ?a a?t???afa µp????? ?a ?????ta? ?at' ep????? ? µ?s? p????aµµat?sµ??.</description>
+    <description lang="en">Ever hosed your Kodi configuration and wished you'd had a backup? Now you can with one easy click. You can export your database, playlist, thumbnails, addons and other configuration details to any source writeable by XBMC or directly to Dropbox cloud storage. Backups can be run on demand or via a scheduler. </description>
+    <description lang="en_NZ">Ever hosed your XBMC configuration and wished you'd had a backup? Now you can with one easy click. You can export your database, playlist, thumbnails, addons and other configuration details to any source writeable by XBMC or directly to Dropbox cloud storage. Backups can be run on demand or via a scheduler. </description>
+    <description lang="en_US">Ever hosed your XBMC configuration and wished you'd had a backup? Now you can with one easy click. You can export your database, playlist, thumbnails, addons and other configuration details to any source writeable by Kodi or directly to Dropbox cloud storage. Backups can be run on demand or via a scheduler. </description>
+    <description lang="es">¿Alguna vez te has cargado la configuración de XBMC y habrías deseado tener una copia de seguridad? Ahora puedes tenerla con un único click. Exporta tus base de datos, listas de reproducción, miniaturas, addons y resto de configuraciones a cualquier fuente accesible por XBMC o a tu almacenamiento en Dropbox. Las copias de seguridad pueden programarse o realizarse bajo demanda.</description>
+    <description lang="es_MX">¿Alguna vez haz echado a perder tu configuración de XBMC y haz deseado tener un respaldo? Ahora puedes tenerlo con un simple click. Puedes exportar tu base de datos, listas de reproducción, miniaturas, addons y otros detalles de configuración correspondientes a cualquier fuente que pueda escribir XBMC. Los respaldos pueden ser efectuados a pedido o mediante una programación temporal</description>
+    <description lang="fr">Avez-vous déjà perdu votre configuration XBMC et espéré avoir fait une sauvegarde ? Maintenant, vous pouvez le faire en un simple click. Vous pouvez exporter vos bases de données, playlists, miniatures, addons et autres fichiers de configuration vers n'importe quel endroit accessible depuis XBMC.</description>
+    <description lang="fr_CA">Avez-vous déjà ruiné votre configuration XBMC et souhaité avoir une sauvegarde? Vous le pouvez maintenant en un seul clic. Vous pouvez exporter vos base de données, liste de lecture, imagettes, addiciels et autres détails de configurations vers n'importe quelle source inscriptible depuis XBMC ou directement vers le stockage en nuage Dropbox. Les sauvegardes peuvent être exécutées sur demande ou à l'aide d'un ordonnanceur.</description>
+    <description lang="gl">De seguro que algunha vez eliminou a configuración do XBMC e desexou ter unha copia de seguranza?. Agora pode cun só clic. Pode exportar a súa base de datos, listaxes de reprodución, miniaturas, complementos e outros detalles da configuración a calquera medio escribíbel ou directamente ao Dropbox. As copias de seguranza pódense executar baixo demanda ou programadas.</description>
+    <description lang="he">??? ?? ??? ????? ?????? XBMC ?????? ???? ?? ????? ? ??? ??? ???? ????? ??? ?????? ????? ?????. ???? ????? ?? ???? ???????, ?????? ??????, ??????? ?????????, ?????? ??????? ?????? ??? ??? ??? ?-XBMC ????? ????? ?? ?? ?????? ?????? ????? ???? ????????. ???? ????? ???? ??????? ?? ?????? ?????.</description>
+    <description lang="hr">Jeste li ikada otetili vaa XBMC podeavanja i poeljeli ste ih obnoviti iz sigurnosne kopije? Sada to moete jednim klikom. Moete izvesti vau bazu podataka, popis izvodenja, minijature, dodatke i ostale pojedinosti podeavanja na svaki izvor dostupan XBMC-u ili izravno na Dropbox oblak pohrane. Sigurnosno kopiranje se moe pokrenuti na zahtjev ili u planiranom vremenu.</description>
+    <description lang="hu">Sikerült már összekutyulni az XBMC beállításait és jó lett volna egy biztonsági mentés? Most megteheti egy kattintással. Exportálhatja az adatbázisait, lejátszáslistáit, könyvjelzoit, kiegészítoit és egyéb beállításokat bármely, az XBMC által írható tárhelyre vagy közvetlenül a Dropbox felho tárolóba. A mentések kézzel vagy idozítetten indíthatóak.</description>
+    <description lang="id">Pernah membuat berantakan konfigurasi XBMC Anda dan berharap Anda punya cadangannya? Sekarang Anda dapat melakukannya dengan klik mudah. Anda dapat mengekspor basis data, daftar putar, gambar kecil, addon dan rincian konfigurasi lainnya ke sumber mana saja yang dapat ditulis oleh XBMC atau langsung ke penyimpanan awan Dropbox. Pencadangan dapat dijalankan sesuai permintaan atau terjadwal.</description>
+    <description lang="it">Hai mai distrutto la tua configurazione di XBMC ma non ne avevi una copia di backup? Ora puoi farlo con un semplice click. Puoi esportare il tuo database, le playlist, le anteprime, gli add-on ed altre configurazioni su ogni percorso accessibile da XBMC o direttamente su Dropbox. I backup si possono fare a richiesta o possono essere pianificati.</description>
+    <description lang="ja">XBMC????????????????????????... ??????????????????1?????????????????????????????????????????????????????XBMC ????????????????????Dropbox ??????????????????????????????????????????????????????????????</description>
+    <description lang="ko">XBMC ?? ???? ???? ?? ??? ?? ????? ?? ? ?? ???? ?????. ??????, ????, ???, ???? ??  ?? ??? ???? ????? ?? Dropbox ?  ??? ? ????. ??? ?? ?? ???? ??? ? ????.</description>
+    <description lang="lt">Kada naujinate ir konfiguruojate savo XBMC ar susimastete, kad jums reikalinga atsargine kopija? Dabar galite tai atlikti vienu spustelejimu. Savo duomenu bazes, atkurima, miniatiuras, priedus ir kitas konfiguracijos failus galite eksportuoti i bet kokio altinio. Atsargine(-es) kopija(-os) gali buti paleistos pareikalavus arba per tvarkarati.</description>
+    <description lang="nl">Ooit je XBMC configuratie verknalt en gewenst dat je een backup had? Nu kan dat met een simpele klik. Je kunt je bibliotheek, afspeellijsten, miniaturen, addons en andere configuratie optes exporteren naar elke bron die door XBMC beschrijfbaar is of direct naar een Dropbox cloud opslag. Backups kunnen op verzoek of via een rooster gedraaid worden.</description>
+    <description lang="no">Har du noen gang ødelagt XBMC-installasjonen din og ønsket at du hadde en sikkerhetskopi? Det kan du nå med et enkelt trykk. Du kan eksportere din database, spillelister, miniatyrer, utvidelser og andre konfigurasjonsdetaljer til enhver kilde som er tilgjengelig for XBMC eller til Dropbox. Du kan lage sikkerhetskopier ved behov eller med en timeplan.</description>
+    <description lang="pl">Straciles kiedys swoja konfiguracje XBMC i marzyles o kopii zapasowej? Teraz juz mozesz i to w prosty sposób. Mozesz eksportowac swoja baze, listy odtwarzania, miniatury, wtyczki oraz wiele wiecej do dowolnego zródla bezposrednio z XBMC. Kopia bezpieczenstwa moze byc uruchomiona na zadanie lub wg harmonogramu.</description>
+    <description lang="pt">Já arruinou a sua configuração do XBMC e desejou ter feito uma cópia de segurança? Agora pode, com apenas um clique. Exporte a base de dados, listas de reprodução, miniaturas, add-ons e outras configurações para qualquer fonte acedível pelo XBMC. As cópias de segurança podem ser executadas manualmente ou por temporizador.</description>
+    <description lang="pt_BR">Sempre se preocupou com sua configuração do XBMC e desejou ter um backup? Agora você pode com um simples clique. Você pode exportar seu banco de dados, listas de reprodução, miniaturas, addons e outros detalhes de configuração para qualquer fonte gravável pelo XBMC ou diretamente ao armazenamento na nuvem Dropbox. Os backups podem ser executados sob demanda ou por agendamento.</description>
+    <description lang="ru">?????? ???????? ????????? ????? ???????? XBMC? ?????? ?????? ??? ??????? ????? ??????? ????. ?? ?????? ????????? ???? ???? ??????, ?????????, ??????, ?????????? ? ?????? ?????? ??? ?????????? ? ????????? ?? ? ??????? XBMC ??? ????????? ? ???????? ????????? Dropbox. ????????? ????? ????? ??????? ?? ?????????? ??? ????????? ?? ??????????.</description>
+    <description lang="sk">U ste niekedy pokodili konfiguráciu XBMC a priali si mat zálohu? Teraz môete - na jeden klik. Môete exportovat Vau databázu, playlist, náhlady, doplnky a konfigurácie na ktorýkolvek zdroj zapisovatelný XBMC. Zálohy môu byt pútané na poiadanie alebo plánovacom. </description>
+    <description lang="sv">Har du någonsin tappat bort din XBMC konfiguration och önskat att du hade en backup? Nu kan du enkelt med ett klick. Du kan exportera din databas, spellista, minityrer, tillägg och andra konfigurationsdetaljer till valfri källa som är skrivbar för XBMC. Backupper kan köras på begäran eller via scheman.</description>
+    <description lang="zh">????????? XBMC,???????????????????????????????????????? XBMC ????????????????????????????</description>
+    <language></language>
+    <platform>all</platform>
+    <license>The MIT License</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=129499</forum>
+    <source>https://github.com/robweber/xbmcbackup</source>
+  </extension>
+</addon>
+
+<addon id="plugin.video.plexus-streams"
+       name="Plexus-Streams"
+       version="1.0.15j"
+       provider-name="D4FC">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    <import addon="script.module.pytz" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.mechanize" version="0.2.6"/>
+    <import addon="program.plexus" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Plexus wrapper</summary>
+    <description lang="en">P2P-Streams fork that works as a Plexus wrapper</description>
+    <disclaimer lang="en">The authors does not host nor distribute any of the content you may watch using this addon. The authors have no affiliation with any of the content providers. This addon does not track its users.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="build.ravetv" name="[COLOR red]Rave Tv Build[/COLOR]" version="1.0" provider-name="Rave Tv">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>program executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Build Rave Tv</summary>
+    <description>Build Rave Tv</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+
+<addon id="plugin.video.playlistLoader" name="Playlist Loader" version="1.0.9" provider-name="Avigdor">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Playlist Loader - downloaded for free from:
+http://www.hometheater.co.il</summary>
+    <description lang="en">Playlist Loader - downloaded for free from:
+http://www.hometheater.co.il</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.kodilivetv" name="Kodi Live TV" version="2.1.5" provider-name="Vania Rupeni">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="xbmc.addon" version="13.0.0" />
+    <import addon="script.module.requests" version="2.9.1" />
+    <import addon="script.module.simplejson" version="3.3.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Kodi Live TV - downloaded for free from: http://kodilive.eu</summary>
+    <description lang="en">Kodi Live TV - downloaded for free from:
+http://kodilive.eu
+Plugin to watch IPTV free worldwide
+Steps to be done before using the Teleboy section:
+--------------------------------------------------------------------------------
+* open "http://www.teleboy.ch" in your browser
+* sign up (free) and login and create your preferred channel list
+* enter your login and password in the addon settings and enjoy live television!
+--------------------------------------------------------------------------------
+f4m Proxy part is fork of f4mProxy by Shani
+Teleboy part is fork of Teleboy Live TV addon by Andreas Wetzel
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.youtube" name="YouTube" version="5.3.2" provider-name="jdf76, bromix">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+        <news>
+- Added MPEG-DASH support for Kodi 17 w/ inputstream.mpd Add-on
+- Added optional History and Watch Later custom playlist to Settings -> Folders, or (My)Playlists context menu to set/remove
+- Added Maintenance section to Settings
+- Added 'Subtitle language(s) to download' selection to Settings -> General
+- API key set switching from Settings -> API (this will log you out)
+- Dual login only required if My Subscriptions folder is enabled at sign-in
+- API Tweaking and Various other Updates
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <summary lang="en">Plugin for YouTube</summary>
+        <description lang="en">YouTube is one of the biggest video-sharing websites of the world.</description>
+		<summary lang="de">Plugin für YouTube</summary>
+        <description lang="de">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
+        <summary lang="pl">Wtyczka YouTube</summary>
+        <description lang="pl">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
+		<summary lang="hu">Kiegészítő  a YouTube-hoz</summary>
+        <description lang="hu">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
+        <summary lang="es">Plugin para YouTube</summary>
+        <description lang="es">YouTube es un uno de los mayores sitios web de intercambio de vídeos del mundo.</description>
+        <summary lang="ru">Видеодополнение YouTube</summary>
+        <description lang="ru">Данное дополнение позволяет находить и смотреть видео на всеми любимом сайте.</description>
+        <summary lang="fr">Plugin pour YouTube</summary>
+        <description lang="fr">YouTube est l'un des plus grands sites de partage vidéos du monde.</description>
+        <summary lang="zh">YouTube附加元件</summary>
+        <description lang="zh">「Youtube」是全世界最大的影片分享網站</description>
+        <summary lang="bg">Добавка за YouTube</summary>
+        <description lang="bg">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
+		<summary lang="el">Πρόσθετο YouTube</summary>
+        <description lang="el">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
+        <summary lang="no">Tillegg for YouTube</summary>
+        <description lang="no">YouTube er en av verdens største nettsider for videodeling.</description>
+        <disclaimer lang="en"></disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=267160</forum>
+		<website>http://www.youtube.com</website>
+		<email>ytplugin at datanet dot ws</email>
+		<source>https://github.com/Kolifanes/plugin.video.youtube</source>
+	</extension>
+</addon>
+
+<addon id="plugin.program.mkiv" name="[COLOR red][B]MK-IV[/B] [/COLOR][COLOR blue]Wizard[/COLOR]" version="1.0.15" provider-name="[COLOR deepskyblue][B]CamC[/B][/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.23.0"/>
+	<import addon="script.module.addon.common" />
+    <import addon="plugin.video.youtube"  optional="true"/>
+    <import addon="script.module.requests" version="2.9.1" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.service" library="splash.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">A must have multi-tool</summary>
+    <description lang="en"> Contact me if you need help @ MKIV@protonmail.com</description>
+    <platform>all</platform>
+    </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <menu>
+                <label>MK-IV Tools</label>
+                <item library="ClearCache.py">
+                    <label>Clear Cache</label>
+                    <visible>true</visible>
+                </item>
+                <item library="DeletePackages.py">
+                    <label>Delete Packages</label>
+                    <visible>true</visible>
+                </item>
+                <item library="EnableAll.py">
+                    <label>Enable All Addons</label>
+                    <visible>true</visible>
+                </item>                
+                <item library="DeleteThumbs.py">
+                    <label>Delete Thumbnails</label>
+                    <visible>true</visible>
+                </item>
+                <item library="RefreshSkin.py">
+                    <label>Reload Skin</label>
+                    <visible>true</visible>
+                </item>                               
+                <menu>
+                    <label>Log Tools</label>
+                    <item library="ViewLast.py">
+                        <label>View Last Error</label>
+                        <visible>true</visible>
+                    </item>
+                    <item library="ViewAll.py">
+                        <label>View All Errors</label>
+                        <visible>true</visible>
+                    </item>
+                    <item library="ViewFull.py">
+                        <label>View Full Log</label>
+                        <visible>true</visible>
+                    </item>
+                    <item library="Upload.py">
+                        <label>Upload Log</label>
+                        <visible>true</visible>
+                    </item>                                        
+                </menu>
+            </menu>
+        </menu>
+	</extension>
+</addon>
+
+
+<addon id="plugin.video.exodus" version="2.0.20" name="Exodus" provider-name="Exodus">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.exodus.artwork" version="1.0.4" />
+		<import addon="script.exodus.metadata" version="1.0.0" />
+		<import addon="script.module.urlresolver" version="3.0.0" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="exodus.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Exodus</summary>
+		<description lang="en">Please visit www.tvaddons.ag for Exodus support and assistance! Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<platform>all</platform>
+		<news>- Updated indexers[CR]- Tweaked pagination of Trakt lists[CR]- Tweaked flatten of tv shows (for external addons and library)[CR]- Tweaked artwork of episode lists[CR]- Updated providers</news>
+	</extension>
+</addon>
+
+
+
+<addon id="plugin.video.salts" version="2.0.122" name="Stream All The Sources" provider-name="tknorris">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0"/>
+        <import addon="script.module.urlresolver" version="3.0.0"/>
+        <import addon="script.module.myconnpy" version="1.1.6" />
+        <import addon="script.module.tknorris.shared" version="0.0.12"/>
+        <import addon="script.module.image_cache" version="0.0.1" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+     <extension point="xbmc.service" library="service.py" start="startup"/>
+    <extension point="xbmc.addon.metadata">
+        <summary>Stream video from many difference sources</summary>
+        <description>This addon uses trakt.tv for most show and movie meta data and uses a variety of websites for hoster sources
+
+***This addon is developed and supported at [COLOR blue]www.tvaddons.ag[/COLOR]***        
+        </description>
+        <platform>all</platform>
+        <website>http://tvaddons.ag/</website>
+		<forum>http://forums.tvaddons.ag/forums/180-TKNORRIS-RELEASE-REPOSITORY</forum>
+		<assets>
+		  <icon>icon.png</icon>
+		  <fanart>fanart.jpg</fanart>
+		  <screenshot>resources/screenshots/screenshot1.png</screenshot>
+          <screenshot>resources/screenshots/screenshot2.png</screenshot>
+          <screenshot>resources/screenshots/screenshot3.png</screenshot>
+          <screenshot>resources/screenshots/screenshot4.png</screenshot>
+          <screenshot>resources/screenshots/screenshot5.png</screenshot>
+		</assets>
+	</extension>
+</addon>
+
+
+<addon id="plugin.video.specto" name="Specto - ... Fork"  version="2016.11.18.3" provider-name="mrknow" >
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.requests" version="1.0.0" />
+		<import addon="script.module.metahandler" />
+		<import addon="plugin.video.youtube" optional="true" />
+		<import addon="script.mrknow.urlresolver" />
+		<import addon="script.specto.media" />
+
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Mrknow fork of ...</summary>
+		<description lang="en">Specto - ... Fork. Website http://filmkodi.com . Our suport forum https://github.com/mrknow/filmkodi/issues.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.
+		</disclaimer>
+		<forum>https://github.com/mrknow/filmkodi/issues</forum>
+		<source>http://filmkodi.com/repository/</source>
+		<website>http://filmkodi.com/en/wtyczka-specto-fork-genesis/</website>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
+<addon id="script.exodus.artwork" version="1.0.4" name="Exodus Artwork" provider-name="Exodus">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Exodus Addon</summary>
+		<description>Themes for Exodus are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
+<addon id="script.specto.media" version="2016.07.07" name="Specto Themepak" provider-name="mrknow" >
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for Specto</summary>
+		<description>Themes for Specto.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
+<addon id="repository.shani" name="Shanis Addon Repository" version="2.9" provider-name="Shani">
+	<extension point="xbmc.addon.repository" name="Shanis Addon Repository">
+        <dir>
+			<info compressed="false">https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml</info>
+			<checksum>https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/zips/</datadir>
+		</dir>
+    
+    <info compressed="false">https://offshoregit.com/Shani-08/main/addons.xml</info>
+    <checksum>https://offshoregit.com/Shani-08/main/addons.xml.md5</checksum>
+    <datadir zip="true">https://offshoregit.com/Shani-08/main/zips</datadir>
+
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Addons related to XBMC for Zemtv etc</summary>
+		<description>Go though the plugins and see what you like</description>
+		<platform>all</platform>
+	</extension>
+</addon>	
+
+
+<addon id="script.exodus.metadata" version="1.0.0" name="Exodus Metadata" provider-name="Exodus">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for the Exodus Addon</summary>
+		<description>Metadata for Exodus are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
+
+
+
+
+</addons>

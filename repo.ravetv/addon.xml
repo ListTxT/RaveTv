@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repo.ravetv" name="Rave Tv repo" version="0.1" provider-name="Rave tv">
+	<extension point="xbmc.addon.repository" name="Rave Tv repo">
+		<info compressed="false">http://raw.githubusercontent.com/Team-j2mf4/Team-j2mf4/master/addons.xml</info>
+		<checksum>http://raw.githubusercontent.com/Team-j2mf4/Team-j2mf4/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.githubusercontent.com/Team-j2mf4/Team-j2mf4/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Rave Tv repo</summary>
+		<description>Repositório Rave Tv</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
