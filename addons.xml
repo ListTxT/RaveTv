@@ -826,6 +826,29 @@ Teleboy part is fork of Teleboy Live TV addon by Andreas Wetzel
 </addon>	
 
 
+
+<addon id="repository.mrpiracy" name="MrPiracy.win Repositório" version="1.0.3" provider-name="MrPiracy.win">
+	<extension point="xbmc.addon.repository" name="MrPiracy Repository">
+		<dir>
+			<info compressed="false">http://raw.github.com/mrpiracyPT/repository.mrpiracy/master/addons.xml</info>
+			<checksum>http://raw.github.com/mrpiracyPT/repository.mrpiracy/master/addons.xml.md5</checksum>
+			<datadir zip="true">http://raw.github.com/mrpiracyPT/repository.mrpiracy/master/repo/</datadir>
+		</dir>
+		
+		<info compressed="false">http://raw.github.com/mrpiracyPT/repository.mrpiracy/master/addons.xml</info>
+		<checksum>http://raw.github.com/mrpiracyPT/repository.mrpiracy/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/mrpiracyPT/repository.mrpiracy/master/repo/</datadir>
+	</extension>
+	
+	<extension point="xbmc.addon.metadata">
+		<summary>MrPiracy.win Repositório</summary>
+		<description>Addon Description</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
 <addon id="script.exodus.metadata" version="1.0.0" name="Exodus Metadata" provider-name="Exodus">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
