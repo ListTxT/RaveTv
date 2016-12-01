@@ -4,9 +4,9 @@
 
 <addon id="repo.ravetv" name="[COLOR red]Rave Tv[/COLOR]" version="0.1" provider-name="Rave Tv">
 	<extension point="xbmc.addon.repository" name="Rave Tv repo">
-		<info compressed="false">http://raw.githubusercontent.com/raveftw/RaveTv/master/addons.xml</info>
-		<checksum>http://raw.githubusercontent.com/raveftw/RaveTv/master/addons.xml.md5</checksum>
-		<datadir zip="true">http://raw.githubusercontent.com/raveftw/RaveTv/master/repo/</datadir>
+		<info compressed="false">https://github.com/ListTxT/RaveTv/master/addons.xml</info>
+		<checksum>https://github.com/ListTxT/RaveTv/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/ListTxT/RaveTv/master/repo/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Rave Tv repo</summary>
